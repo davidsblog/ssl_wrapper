@@ -9,14 +9,16 @@ This is a fork of [ssl_wrapper](https://github.com/cesanta/ssl_wrapper) which I 
 
 	git clone https://github.com/cesanta/ssl_wrapper
 	cd ssl_wrapper
-	generate_ssl_certificate.sh localhost
+	./generate_ssl_certificate.sh localhost
 	make
 
 Note: SSL Wrapper is built on top of
 [Net Skeleton](https://github.com/cesanta/net_skeleton), and therefore
 it is portable and works on may operating systems including Windows, MacOS, UNIX/LINUX, QNX, eCos, Android, iOS, and more.
 
-## Running
+## Running it
+
+A self-signed certificate (`server.pem`) will have been created with the build instructions above.
 
 	 sudo ./ssl_wrapper ssl://443:server.pem 127.0.0.1:80
 
