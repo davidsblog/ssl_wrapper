@@ -16,6 +16,12 @@ Note: SSL Wrapper is built on top of
 [Net Skeleton](https://github.com/cesanta/net_skeleton), and therefore
 it is portable and works on may operating systems including Windows, MacOS, UNIX/LINUX, QNX, eCos, Android, iOS, and more.
 
+## Running
+
+	 sudo ./ssl_wrapper ssl://443:server.pem 127.0.0.1:80
+
+This is the default configuration, terminating SSL and forwarding all traffic onto port 80.
+
 ## License
 
 SSL Wrapper is released under
