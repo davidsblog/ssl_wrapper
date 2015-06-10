@@ -7,6 +7,9 @@ This is a fork of [ssl_wrapper](https://github.com/cesanta/ssl_wrapper) which I 
 
 ## Building SSL wrapper
 
+	sudo apt-get install libssl-dev
+	sudo apt-get install openssl
+	sudo apt-get update
 	git clone https://github.com/davidsblog/ssl_wrapper
 	cd ssl_wrapper
 	./generate_ssl_certificate.sh localhost
