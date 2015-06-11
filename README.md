@@ -3,7 +3,7 @@ ssl_wrapper
 
 **Note:** [see original documentation](https://github.com/cesanta/ssl_wrapper).
 
-This is a fork of [ssl_wrapper](https://github.com/cesanta/ssl_wrapper) which I am trying to make work in Chrome without complaints of obsolete cryptography.  I have also included an edited `generate_ssl_certificate.sh` script from [Net Skeleton](https://github.com/cesanta/net_skeleton), to make it easier to set up.
+This is a fork of [ssl_wrapper](https://github.com/cesanta/ssl_wrapper) which I am trying to make work in Chrome without complaints of obsolete cryptography.  I have also included an edited `generate_ssl_certificate.sh` script from [Net Skeleton](https://github.com/cesanta/net_skeleton), to make it easier to set up - the script will create a self-signed certificate for testing.
 
 ## Building SSL wrapper
 
