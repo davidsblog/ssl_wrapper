@@ -21,7 +21,7 @@ it is portable and works on may operating systems including Windows, MacOS, UNIX
 
 ## Running it
 
-A self-signed certificate (`server.pem`) will have been created with the build instructions above.
+A test certificate (`server.pem`) will have been created with the build instructions above.
 
 	 sudo ./ssl_wrapper ssl://443:server.pem 127.0.0.1:80
 
