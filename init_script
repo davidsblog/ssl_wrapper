@@ -20,7 +20,8 @@ case "$1" in
     ;;
     stop)
         echo "Stopping the ssl_wrapper service..."
-        killall nanodns
+        killall ssl_wrapper
+        fuser -k 443/tcp
         echo "The ssl_wrapper service should be stopped"
         ;;
     *)
