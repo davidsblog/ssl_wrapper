@@ -16,15 +16,15 @@ ssl_wrapper: $(SOURCES)
 
 install:
 	ln -s ~/ssl_wrapper /usr/local/bin/
-	cp -n init_script /etc/init.d/ssl_wrappersvc
-	chmod +x /etc/init.d/ssl_wrappersvc
-	update-rc.d ssl_wrappersvc defaults
-	/etc/init.d/ssl_wrappersvc start
+	cp -n init_script /etc/init.d/sslwrappersvc
+	chmod +x /etc/init.d/sslwrappersvc
+	update-rc.d sslwrappersvc defaults
+	/etc/init.d/sslwrappersvc start
 
 uninstall:
-	/etc/init.d/ssl_wrappersvc stop
-	update-rc.d -f ssl_wrappersvc remove
-	rm -f /etc/init.d/ssl_wrappersvc
+	/etc/init.d/sslwrappersvc stop
+	update-rc.d -f sslwrappersvc remove
+	rm -f /etc/init.d/sslwrappersvc
 	rm -f /usr/local/bin/ssl_wrapper
 
 clean:
