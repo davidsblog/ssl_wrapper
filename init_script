@@ -1,0 +1,32 @@
+#!/bin/bash
+# /etc/init.d/sslwrappersvc
+
+### BEGIN INIT INFO
+# Provides:          ssl_wrapper
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Example initscript
+# Description:       Wraps SSL traffic
+### END INIT INFO
+
+
+case "$1" in
+    start)
+        echo "Starting ssl_wrapper service..."
+        /usr/local/bin/ssl_wrapper/ssl_wrapper ssl://443:/usr/local/bin/ssl_wrapper/server.pem 127.0.0.1:80 &
+        echo "The ssl_wrapper service should be running"
+    ;;
+    stop)
+        echo "Stopping the ssl_wrapper service..."
+        killall nanodns
+        echo "The ssl_wrapper service should be stopped"
+        ;;
+    *)
+        echo "Usage: /etc/init.d/aalwrappersvc start|stop"
+        exit 1
+        ;;
+esac
+
+exit 0
