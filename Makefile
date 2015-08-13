@@ -14,5 +14,18 @@ endif
 ssl_wrapper: $(SOURCES)
 	$(CC) -o $@ $(SOURCES) $(CFLAGS)
 
+install:
+	cp -n ssl_wrapper /usr/local/bin
+	cp -n init_script /etc/init.d/ssl_wrappersvc
+	chmod +x /etc/init.d/ssl_wrappersvc
+	update-rc.d ssl_wrappersvc defaults
+	/etc/init.d/ssl_wrappersvc start
+
+uninstall:
+	/etc/init.d/ssl_wrappersvc stop
+	update-rc.d -f ssl_wrappersvc remove
+	rm -f /usr/local/bin/ssl_wrapper
+	rm -f /etc/init.d/ssl_wrappersvc
+
 clean:
 	rm -rf ssl_wrapper ssl_wrapper.exe *.o *.obj *.dSYM
